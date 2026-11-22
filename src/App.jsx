@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { Phone, Mail, ArrowUpRight } from 'lucide-react';
 import { MEDIA } from './data/media';
-import LotusIcon from './components/LotusIcon';
 import LegalModal from './components/LegalModal';
 
 export default function App() {
@@ -10,63 +9,30 @@ export default function App() {
   return (
     <div className="min-h-screen bg-sand-100 text-earth-950 flex flex-col justify-between relative overflow-hidden selection:bg-sage/15 selection:text-earth-950 font-sans">
       
-      {/* Atmosphärischer Hintergrund (Zen / Wasser / Naturstein) */}
+      {/* Atmosphärischer Hintergrund (Zen / Wasser / Naturstein – dezent sichtbarer) */}
       <div className="absolute inset-0 z-0 pointer-events-none select-none overflow-hidden">
         <img
           src={MEDIA.zen}
           alt=""
-          className="w-full h-full object-cover object-center opacity-20 filter blur-[0.5px] scale-105"
+          className="w-full h-full object-cover object-center opacity-35 scale-105"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-sand-100/90 via-sand-100/85 to-sand-100" />
+        <div className="absolute inset-0 bg-gradient-to-b from-sand-100/80 via-sand-100/70 to-sand-100/90" />
       </div>
 
-      {/* Top Header */}
-      <header className="relative z-10 border-b border-sand-200/80 bg-sand-50/70 backdrop-blur-md">
-        <div className="max-w-3xl mx-auto px-4 sm:px-6 py-4 flex items-center justify-between">
-          <div className="flex items-center gap-3">
-            <div className="w-9 h-9 rounded-full bg-sand-200/80 border border-sand-300 flex items-center justify-center text-sage">
-              <LotusIcon className="w-4 h-4 text-sage" />
-            </div>
-            <div>
-              <span className="block text-xs sm:text-sm font-semibold uppercase tracking-wider text-earth-950">
-                Shivani Claudia Siegmund
-              </span>
-              <span className="block text-[11px] text-earth-600 font-serif italic">
-                Yoga, Erfahrungsräume &amp; Begleitung
-              </span>
-            </div>
-          </div>
-
-          <a
-            href="mailto:c.siegmund@gmx.net"
-            className="inline-flex items-center justify-center px-4 py-2 rounded-full text-xs font-semibold uppercase tracking-wider text-sand-50 bg-sage hover:bg-sage-dark shadow-sm transition-all"
-          >
-            Kontakt
-          </a>
-        </div>
-      </header>
-
-      {/* Main Content – Kompakt, reduziert & zentriert */}
+      {/* Main Content – Ohne Header & ohne Logo, komplett zentriert & reduziert */}
       <main className="relative z-10 flex-grow flex items-center justify-center py-12 px-4 sm:px-6">
         <div className="max-w-2xl w-full mx-auto text-center">
           
           {/* Ankündigung */}
           <div className="mb-10">
-            <div className="inline-flex items-center gap-2 mb-4">
-              <LotusIcon className="w-5 h-5 text-sage" />
-              <span className="text-xs uppercase tracking-[0.25em] text-sage font-semibold">
-                Neue Website in Entstehung
-              </span>
-            </div>
+            <span className="inline-block text-xs uppercase tracking-[0.25em] text-sage font-semibold mb-4">
+              Neue Website in Entstehung
+            </span>
 
-            <h1 className="text-3xl sm:text-4xl md:text-5xl font-serif text-earth-950 font-normal leading-[1.15] tracking-tight mb-4">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl font-serif text-earth-950 font-normal leading-[1.15] tracking-tight">
               Hier entsteht die neue Internetpräsenz von{' '}
               <span className="italic text-sage">Shivani Claudia Siegmund</span>.
             </h1>
-
-            <p className="text-base sm:text-xl font-serif italic text-earth-700 leading-relaxed max-w-xl mx-auto">
-              „Ich öffne einen Raum, in dem du deinen eigenen Boden wieder wahrnehmen kannst.“
-            </p>
           </div>
 
           {/* Kompakte Direkt-Kontaktkarte */}
@@ -127,11 +93,8 @@ export default function App() {
 
       {/* Rechtssicherer Footer mit Impressum & Datenschutz */}
       <footer className="relative z-10 bg-sand-50/80 border-t border-sand-300/80 py-5 px-4 sm:px-6 text-earth-700">
-        <div className="max-w-3xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-3 text-xs">
-          <div className="flex items-center gap-2">
-            <LotusIcon className="w-4 h-4 text-sage" />
-            <span>© {new Date().getFullYear()} Shivani Claudia Siegmund · Hannover</span>
-          </div>
+        <div className="max-w-2xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-3 text-xs">
+          <span>© {new Date().getFullYear()} Shivani Claudia Siegmund · Hannover</span>
 
           <div className="flex items-center gap-6 font-medium">
             <button

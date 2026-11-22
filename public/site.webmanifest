@@ -1,19 +1,33 @@
 {
-  "name": "Yoga Hannover \u2013 Shivani Claudia Siegmund",
-  "short_name": "Yoga Hannover",
+  "name": "Shivani Claudia Siegmund – Yoga, Erfahrungsräume & Begleitung",
+  "short_name": "Claudia Siegmund",
+  "description": "Ich öffne einen Raum, in dem du deinen eigenen Boden wieder wahrnehmen kannst. Yoga, Spirituelle Lebensberatung, Mediale Begleitung & Erfahrungsräume in Hannover.",
   "icons": [
+    {
+      "src": "/favicon-48x48.png",
+      "sizes": "48x48",
+      "type": "image/png"
+    },
+    {
+      "src": "/favicon-96x96.png",
+      "sizes": "96x96",
+      "type": "image/png"
+    },
     {
       "src": "/android-chrome-192x192.png",
       "sizes": "192x192",
-      "type": "image/png"
+      "type": "image/png",
+      "purpose": "any maskable"
     },
     {
       "src": "/android-chrome-512x512.png",
       "sizes": "512x512",
-      "type": "image/png"
+      "type": "image/png",
+      "purpose": "any maskable"
     }
   ],
   "theme_color": "#FBF9F5",
   "background_color": "#FBF9F5",
-  "display": "standalone"
+  "display": "standalone",
+  "start_url": "/"
 }
